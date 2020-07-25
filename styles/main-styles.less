@@ -1,5 +1,27 @@
-@defaultPaddding: 6px;
+@navHeight      : 150px;
+@colorThemeWhite: #FDFDFD;
 
-h1 {
-    padding: @defaultPaddding 0px;
+// General
+* {
+    margin : 0px;
+    padding: 0px;
+}
+
+// Navigation Related
+nav {
+    height    : @navHeight;
+    width     : 100%;
+    position  : static;
+    background: @colorThemeWhite;
+}
+
+nav>h3 {
+    font-size  : 30px;
+    position   : relative;
+    left       : 50%;
+    width      : 300px;
+    text-align : center;
+    padding-top: 34px;
+    margin-left: -150px;
+    font-weight: lighter;
 }
