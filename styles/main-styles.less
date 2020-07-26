@@ -1,10 +1,27 @@
-@navHeight      : 150px;
-@colorThemeWhite: #FDFDFD;
+@navHeight           : 150px;
+@colorThemeWhite     : #FDFDFD;
+@colorThemeGrey      : #8D8D8D;
+@colorThemeGreyActive: #a5a5a5;
+@animTime            : 250ms;
 
 // General
 * {
-    margin : 0px;
-    padding: 0px;
+    margin     : 0px;
+    padding    : 0px;
+    font-family: "raleway";
+}
+
+.fl-auto {
+    margin-right: auto;
+}
+
+// Transitions
+
+.transAll {
+    -webkit-transition: all @animTime ease-out;
+    -moz-transition   : all @animTime ease-out;
+    -o-transition     : all @animTime ease-out;
+    transition        : all @animTime ease-out;
 }
 
 // Navigation Related
@@ -13,15 +30,50 @@ nav {
     width     : 100%;
     position  : static;
     background: @colorThemeWhite;
-}
 
-nav>h3 {
-    font-size  : 30px;
-    position   : relative;
-    left       : 50%;
-    width      : 300px;
-    text-align : center;
-    padding-top: 34px;
-    margin-left: -150px;
-    font-weight: lighter;
+    >h3 {
+        font-size  : 30px;
+        position   : relative;
+        left       : 50%;
+        width      : 300px;
+        text-align : center;
+        padding-top: 34px;
+        margin-left: -150px;
+        font-weight: lighter;
+        color      : @colorThemeGrey;
+    }
+
+    >.social-links {
+        position   : relative;
+        display    : flex;
+        left       : 50%;
+        width      : 300px;
+        margin-left: -150px;
+        margin-top : 15px;
+
+        >a {
+            margin: 0px 10px;
+            width : 36px;
+            height: 36px;
+
+            >svg {
+                .transAll;
+                fill    : @colorThemeGrey;
+                width   : 30px;
+                height  : 30px;
+                left    : 3px;
+                top     : 3px;
+                position: relative;
+            }
+
+            :hover {
+                .transAll;
+                fill  : var(--active-color);
+                width : 36px;
+                height: 36px;
+                left  : 0px;
+                top   : 0px;
+            }
+        }
+    }
 }
