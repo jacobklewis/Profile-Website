@@ -18,7 +18,7 @@
         {
             "label": "Type Script Compile & Minify",
             "type": "shell",
-            "command": "tsc scripts/main.ts && uglifyjs --compress --mangle --output scripts/main.min.js -- scripts/main.js && rm scripts/main.js",
+            "command": "tsc scripts/main.ts && uglifyjs --compress --mangle --output scripts/main.min.js -- scripts/main.js",//&& rm scripts/main.js
             "group": "build",
             "problemMatcher": []
         }

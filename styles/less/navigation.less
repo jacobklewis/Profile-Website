@@ -1,0 +1,68 @@
+// Navigation Related
+.small-nav {
+    height: @navHeight - 50px;
+
+    >h3 {
+        font-size    : 20px;
+        padding-top  : 14px;
+        margin-left  : -150px;
+        margin-bottom: 5px;
+    }
+}
+
+nav {
+    .transAll;
+    z-index   : 1001;
+    height    : @navHeight;
+    width     : 100%;
+    top       : 0px;
+    position  : fixed;
+    background: @colorThemeWhite;
+
+    >h3 {
+        .transAll;
+        font-size    : 30px;
+        position     : relative;
+        left         : 50%;
+        width        : 300px;
+        text-align   : center;
+        padding-top  : 34px;
+        margin-left  : -150px;
+        margin-bottom: 15px;
+        font-weight  : lighter;
+        color        : @colorThemeGrey;
+    }
+
+    >.social-links {
+        position   : relative;
+        display    : flex;
+        left       : 50%;
+        width      : 300px;
+        margin-left: -150px;
+
+        >a {
+            margin: 0px 10px;
+            width : 36px;
+            height: 36px;
+
+            >svg {
+                .transAll;
+                fill    : @colorThemeGrey;
+                width   : 30px;
+                height  : 30px;
+                left    : 3px;
+                top     : 3px;
+                position: relative;
+            }
+
+            :hover {
+                .transAll;
+                fill  : var(--active-color);
+                width : 36px;
+                height: 36px;
+                left  : 0px;
+                top   : 0px;
+            }
+        }
+    }
+}

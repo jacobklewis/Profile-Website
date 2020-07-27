@@ -1,0 +1,58 @@
+// Layout
+.fl-auto {
+    margin-right: auto;
+}
+
+img {
+    width : 100%;
+    height: auto;
+}
+
+.cont {
+    width    : 80%;
+    max-width: 1100px;
+    margin   : 0px auto;
+    position : relative;
+}
+
+@media only screen and (min-width: 651px) {
+    each(range(12), {
+            .fl-lg-@{value} {
+                width: @value/12*100%;
+                display: block;
+            }
+        }
+
+    )
+}
+
+@media only screen and (max-width: 650px) {
+    each(range(12), {
+            .fl-sm-@{value} {
+                width: @value/12*100%;
+                display: block;
+            }
+        }
+
+    )
+}
+
+@media only screen and (max-width: 650px) {
+    .hide-sm {
+        display: none;
+    }
+
+    .flex-sm {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 651px) {
+    .hide-lg {
+        display: none;
+    }
+
+    .flex-lg {
+        display: flex;
+    }
+}
