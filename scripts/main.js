@@ -15,7 +15,7 @@ window.onscroll = function () {
 };
 function sizeSections() {
     var sectionSize = 0.75;
-    var elements = document.getElementsByClassName("section");
+    var elements = document.getElementsByClassName("sized-section");
     for (var index = 0; index < elements.length; index++) {
         var element = elements[index];
         element.style.height = window.innerHeight * sectionSize + "px";

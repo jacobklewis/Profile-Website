@@ -3,6 +3,10 @@
     margin-right: auto;
 }
 
+.flex {
+    display: flex;
+}
+
 img {
     width : 100%;
     height: auto;
@@ -18,7 +22,7 @@ img {
 @media only screen and (min-width: 651px) {
     each(range(12), {
             .fl-lg-@{value} {
-                width: @value/12*100%;
+                width  : @value/12*100%;
                 display: block;
             }
         }
@@ -29,7 +33,7 @@ img {
 @media only screen and (max-width: 650px) {
     each(range(12), {
             .fl-sm-@{value} {
-                width: @value/12*100%;
+                width  : @value/12*100%;
                 display: block;
             }
         }
@@ -43,7 +47,7 @@ img {
     }
 
     .flex-sm {
-        display: flex;
+        .flex;
     }
 }
 
@@ -53,6 +57,6 @@ img {
     }
 
     .flex-lg {
-        display: flex;
+        .flex;
     }
 }

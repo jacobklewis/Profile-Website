@@ -15,7 +15,7 @@ window.onscroll = function() {
 
 function sizeSections() {
     const sectionSize = 0.75
-    let elements = document.getElementsByClassName("section")
+    let elements = document.getElementsByClassName("sized-section")
     for (let index = 0; index < elements.length; index++) {
         const element = elements[index] as HTMLElement;
         element.style.height = `${window.innerHeight * sectionSize}px`
