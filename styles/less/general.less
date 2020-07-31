@@ -28,3 +28,18 @@ footer {
 .label {
     text-align: center;
 }
+
+.btn-light {
+    padding      : 20px;
+    display      : block;
+    text-align   : center;
+    border       : thin solid @colorThemeWhite;
+    border-radius: 1em;
+    .transAll;
+    .light;
+
+    &:hover {
+        color : @colorThemeGrey;
+        border: thin solid @colorThemeGreyActive;
+    }
+}

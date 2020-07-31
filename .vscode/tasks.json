@@ -4,9 +4,17 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "Main Build",
             "type": "shell",
-            "command": "echo Hello"
+            "group": "build",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Less Compile",
+                "Type Script Compile",
+                "Type Script Compress",
+                "Type Script Cleanup"
+            ],
+            "problemMatcher": []
         },
         {
             "label": "Less Compile",
@@ -16,9 +24,23 @@
             "problemMatcher": []
         },
         {
-            "label": "Type Script Compile & Minify",
+            "label": "Type Script Compile",
             "type": "shell",
-            "command": "tsc scripts/main.ts && uglifyjs --compress --mangle --output scripts/main.min.js -- scripts/main.js",//&& rm scripts/main.js
+            "command": "tsc scripts/main.ts",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Type Script Compress",
+            "type": "shell",
+            "command": "uglifyjs --compress --mangle --output scripts/main.min.js -- scripts/main.js",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Type Script Cleanup",
+            "type": "shell",
+            "command": "rm scripts/main.js",
             "group": "build",
             "problemMatcher": []
         }
